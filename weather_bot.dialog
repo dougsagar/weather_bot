@@ -98,7 +98,8 @@
           "activityProcessed": true,
           "dialog": "CancelDialog"
         }
-      ]
+      ],
+      "condition": "=#Cancel.Score >= 0.8"
     },
     {
       "$kind": "Microsoft.OnIntent",
@@ -116,13 +117,11 @@
           "activityProcessed": true,
           "dialog": "HelpDialog"
         }
-      ]
+      ],
+      "condition": "=#Help.Score >= 0.5"
     }
   ],
   "generator": "weather_bot.lg",
   "id": "weather_bot",
-  "recognizer": {
-    "$kind": "Microsoft.RegexRecognizer",
-    "intents": []
-  }
+  "recognizer": "weather_bot.lu.qna"
 }
